@@ -40,4 +40,16 @@ export function addSecretIngredient(firstRecipe, secondRecipe) {
     if (SECRET_INGREDIENT) secondRecipe.push(SECRET_INGREDIENT);
 }
 
+// using reassignment to avoid mutating the original values
+export function scaleRecipe(recipe, portionNumber) {
+    const RATIO = portionNumber / 2;
+    let scaledRecipe = {}
+    
+    for (const [key, value] of Object.entries(recipe)) {
+        scaledRecipe[key] = value * RATIO;
+    }
+
+    return scaledRecipe
+}
+
 
