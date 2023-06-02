@@ -36,6 +36,12 @@ export function translate2d(dx, dy) {
  *  scaled coordinate pair in the form [x, y]
  */
 export function scale2d(sx, sy) {
+  const xScalation = sx
+  const yScalation = sy
+
+  return function(x, y) { 
+    return [ x * xScalation, y * yScalation]
+  }
 }
 
 /**
