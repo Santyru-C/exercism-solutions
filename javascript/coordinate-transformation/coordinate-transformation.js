@@ -72,13 +72,18 @@ export function composeTransform(f, g) {
  */
 export function memoizeTransform(f) {
   const storedResults = {};
-
+  let lastX = null;
+  let lastY = null;
+  let lastResult = null;
   return function (x, y) {
-    if (storedResults[x][y]) {
-      return storedResults[x][y]
+    if (lastX === x && lastY === y) {
+      return lastResult
     } else {
       const result = f(x, y);
-      storedResults[x][y] = result;
+      lastX = x;
+      lastY = y;
+      lastResult = result;
+      return result
 
     }
   }
