@@ -33,7 +33,7 @@ export function translate2d(dx, dy) {
  *  scaled coordinate pair in the form [x, y]
  */
 export function scale2d(sx, sy) {
-  
+
   return function(x, y) { 
     return [ x * sx, y * sy]
   }
@@ -51,8 +51,7 @@ export function scale2d(sx, sy) {
  */
 export function composeTransform(f, g) {
   return function (x,y) {
-    const r1 = f(x,y) // evaluate first function
-    return g(r1[0], r1[1]) // pass the result to the second function
+    return g(...f(x,y)) // use array destructuring to directly pass the resulting array as two separate arguments
   }
 }
 
