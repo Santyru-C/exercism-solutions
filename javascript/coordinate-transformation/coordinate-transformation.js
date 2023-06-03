@@ -16,13 +16,10 @@
  */
 
 export function translate2d(dx, dy) {
-  const xTranslation = dx;
-  const yTranslation = dy;
 
-  const moveCoordinates = function(x, y) {
-    return [ x + xTranslation, y + yTranslation]
+  return function(x, y) {
+    return [ x + dx, y + dy]
   }
-  return moveCoordinates
 }
 
 /**
@@ -36,11 +33,9 @@ export function translate2d(dx, dy) {
  *  scaled coordinate pair in the form [x, y]
  */
 export function scale2d(sx, sy) {
-  const xScalation = sx
-  const yScalation = sy
-
+  
   return function(x, y) { 
-    return [ x * xScalation, y * yScalation]
+    return [ x * sx, y * sy]
   }
 }
 
@@ -71,20 +66,21 @@ export function composeTransform(f, g) {
  *  if the arguments are the same on subsequent calls, or compute a new result if they are different.
  */
 export function memoizeTransform(f) {
-  const storedResults = {};
   let lastX = null;
   let lastY = null;
   let lastResult = null;
+
   return function (x, y) {
     if (lastX === x && lastY === y) {
+
       return lastResult
     } else {
       const result = f(x, y);
       lastX = x;
       lastY = y;
       lastResult = result;
+      
       return result
-
     }
   }
 }
