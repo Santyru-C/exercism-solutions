@@ -31,10 +31,9 @@ export function luckyNumber(value) {
  * @param {string|null|undefined} input
  * @returns {string} error message
  */
+
+// type coersion
 export function errorMessage(input) {
-  const handledInput = input ?? ""; // set null and undefined values as empty fields.
-  const inputToNumber = Number(handledInput);
-  if ( handledInput === "" ) return "Required field"
-  if ( Number(handledInput) === 0 || Number.isNaN(inputToNumber)) return "Must be a number besides 0";
-  return ""
+  if (!input) return "Required field"
+  return Number(input) ? "" : "Must be a number besides 0" // 0 gets evaluated as false so will return second option
 }
