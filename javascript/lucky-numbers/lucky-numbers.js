@@ -20,10 +20,8 @@ export function twoSum(array1, array2) {
  */
 export function luckyNumber(value) {
   const stringifiedValue = String(value);
-  const NumberToArray = stringifiedValue.split("").join();
-  const reversed = stringifiedValue.split("").reverse().join(); // use reverse with original value to avoid array destrucion
-
-  return NumberToArray === reversed
+  
+  return stringifiedValue === [...stringifiedValue].reverse().join("")
 }
 
 /**
