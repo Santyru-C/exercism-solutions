@@ -38,4 +38,9 @@ export function luckyNumber(value) {
  * @returns {string} error message
  */
 export function errorMessage(input) {
+  const handledInput = input ?? ""; // set null and undefined values as empty fields.
+  const inputToNumber = Number(handledInput);
+  if ( handledInput === "" ) return "Required field"
+  if ( Number(handledInput) === 0 || Number.isNaN(inputToNumber)) return "Must be a number besides 0";
+  return ""
 }
