@@ -8,7 +8,12 @@
  * @returns {number} sum of the two arrays
  */
 export function twoSum(array1, array2) {
-  throw new Error('Implement the twoSum function');
+  let summand1 = ""
+  let summand2 = ""
+  array1.forEach(number => { summand1 += String(number) });
+  array2.forEach(number => { summand2 += String(number) });
+
+  return Number(summand1) + Number(summand2)
 }
 
 /**
@@ -18,7 +23,11 @@ export function twoSum(array1, array2) {
  * @returns {boolean} whether the number is a palindrome or not
  */
 export function luckyNumber(value) {
-  throw new Error('Implement the luckyNumber function');
+  const stringifiedValue = String(value);
+  const NumberToArray = stringifiedValue.split("").join();
+  const reversed = stringifiedValue.split("").reverse().join(); // use reverse with original value to avoid array destrucion
+
+  return NumberToArray === reversed
 }
 
 /**
@@ -29,5 +38,4 @@ export function luckyNumber(value) {
  * @returns {string} error message
  */
 export function errorMessage(input) {
-  throw new Error('Implement the errorMessage function');
 }
