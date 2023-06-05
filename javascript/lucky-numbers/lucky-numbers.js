@@ -8,12 +8,8 @@
  * @returns {number} sum of the two arrays
  */
 export function twoSum(array1, array2) {
-  let summand1 = ""
-  let summand2 = ""
-  array1.forEach(number => { summand1 += String(number) });
-  array2.forEach(number => { summand2 += String(number) });
 
-  return Number(summand1) + Number(summand2)
+  return Number(array1.join("")) + Number(array2.join(""))
 }
 
 /**
