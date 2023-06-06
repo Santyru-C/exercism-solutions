@@ -56,5 +56,5 @@ Class of ${year}`
 
 // Use of expressions inside template strings.
 export function costOf(sign, currency) {
-  return `Your sign costs ${(20 + sign.length * 2).toFixed(2)} ${currency}.`
+  return `Your sign costs ${(20 + sign.length * 2).toFixed(2)} ${currency}.` // use toFixed to avoid adding fixed-point notation as an appended string.
 }
