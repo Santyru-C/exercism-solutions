@@ -38,7 +38,7 @@ export function buildBirthdaySign(age) {
  * @returns {string} multi-line template string
  */
 
-//
+// Template strings keep string format when passed.
 export function graduationFor(name, year) {
   return `Congratulations ${name}!
 Class of ${year}`
@@ -54,6 +54,7 @@ Class of ${year}`
  * @returns {string} cost to create the sign
  */
 
+// Use of expressions inside template strings.
 export function costOf(sign, currency) {
   return `Your sign costs ${(20 + sign.length * 2) + ".00 " + currency + "."}`
 }
