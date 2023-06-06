@@ -39,6 +39,7 @@ export function buildBirthdaySign(age) {
  */
 
 export function graduationFor(name, year) {
+  ""
 }
 
 /**
