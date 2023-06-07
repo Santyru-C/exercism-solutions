@@ -21,6 +21,8 @@ export function getFirstCard(deck) {
  * @returns {Card} the second card in the deck
  */
 export function getSecondCard(deck) {
+  const [first, second] = deck
+  return second
 }
 
 /**
