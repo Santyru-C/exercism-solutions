@@ -16,14 +16,14 @@ import { order } from './grocer';
  * @return void
  */
 export function onSuccess() {
-  notify({ "message" : "SUCCESS"})
+  notify({ message : "SUCCESS"})
 }
 
 /**
  * @return void
  */
 export function onError() {
-  // implement the onError callback to call notify with an error message
+  notify({ message : "ERROR" })
 }
 
 /**
