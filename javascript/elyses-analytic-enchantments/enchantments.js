@@ -36,7 +36,7 @@ export function doesStackIncludeCard(stack, card) {
  * @returns {boolean} true if all cards are even, false otherwise
  */
 export function isEachCardEven(stack) {
-  
+  return stack.every((card) => card % 2 === 0)
 }
 
 /**
