@@ -16,7 +16,7 @@ Size.prototype.resize = function(newWidth, newHeight) {
     this.width = newWidth;
     this.height = newHeight;
 }; // else every instance of the object would have inherited the method instead
-    // instead of just searching for it in its prototype. (it ends requiring more memory)
+    // instead of just searching for it in its prototype. (and thus requiring more memory)
 
 export function Position(x = 0, y = 0) {
     this.x = x;
@@ -26,4 +26,12 @@ export function Position(x = 0, y = 0) {
 Position.prototype.move = function(newX, newY) {
     this.x = newX;
     this.y = newY;
+}
+
+export class ProgramWindow {
+    constructor() {
+        this.screenSize = new Size(800, 600);
+        this.size = new Size()
+        this.position = new Position()
+    }
 }
