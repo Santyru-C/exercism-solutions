@@ -40,26 +40,32 @@ export class ProgramWindow {
             size.resize(1, 1)
         }
         if (size.width + this.position.x > this.screenSize.width) {
-            size.width = this.screenSize.width - this.position.x
+            size.width = this.screenSize.width - this.position.x;
         }
         if (size.height + this.position.y > this.screenSize.height) {
-            size.height = this.screenSize.height - this.position.y
+            size.height = this.screenSize.height - this.position.y;
         }
         this.size = size;
     }
 
     move(newPosition) {
         if (newPosition.x < 0 || newPosition.y < 0) {
-            newPosition.move(0, 0)
+            newPosition.move(0, 0);
         }
         if (newPosition.x + this.size.width > this.screenSize.width) {
-            newPosition.x = this.screenSize.width - this.size.width
+            newPosition.x = this.screenSize.width - this.size.width;
         }
         if (newPosition.y + this.size.height > this.screenSize.height) {
-            newPosition.y = this.screenSize.height - this.size.height
+            newPosition.y = this.screenSize.height - this.size.height;
         }
 
-        this.position = newPosition
+        this.position = newPosition;
     }
+}
+
+export function changeWindow(programWindow) {
+    programWindow.resize(new Size(400, 300));
+    programWindow.move(new Position(100, 150));
+    return programWindow;
 }
 
