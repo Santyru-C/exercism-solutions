@@ -43,7 +43,7 @@ export class ProgramWindow {
             size.width -= this.screenSize.width - this.position.x 
         }
         if (size.height + this.position.y > this.screenSize.height) {
-            size.width -= this.screenSize.height - this.position.y
+            size.height -= this.screenSize.height - this.position.y
         }
         this.size = size
     }
