@@ -79,6 +79,17 @@ export function twoIsSpecial(deck) {
  * @returns {number[]} ordered deck
  */
 export function perfectlyOrdered(deck) {
+  return deck.sort((card1, card2) => {
+    const card1Num = Number(card1);
+    const card2Num = Number(card2)
+    if (Number(card1Num) < Number(card2Num)) {
+      return -1
+    }
+    if (Number(card1Num) > Number(card2Num)) {
+      return 1
+    }
+    return 0
+  })
 }
 
 /**
