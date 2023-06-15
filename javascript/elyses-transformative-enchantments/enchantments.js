@@ -40,6 +40,8 @@ export function threeOfEachThree(deck) {
  * @returns {number[]} deck with only two middle cards
  */
 export function middleTwo(deck) {
+  const middle = (deck.length / 2) - 1
+  return deck.slice(middle, middle + 2)
 }
 
 /**
