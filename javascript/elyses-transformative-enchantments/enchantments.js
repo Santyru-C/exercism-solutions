@@ -100,4 +100,5 @@ export function perfectlyOrdered(deck) {
  * @returns {number[]} reordered deck
  */
 export function reorder(deck) {
+  return deck.reverse()
 }
