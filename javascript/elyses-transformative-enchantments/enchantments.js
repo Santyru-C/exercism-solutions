@@ -56,9 +56,7 @@ export function sandwichTrick(deck) {
   const firstCard = deck[0];
   const lastCard = deck[deck.length - 1];
   const sandwichDeck = deck.slice(1, -1);
-  console.log(sandwichDeck);
   sandwichDeck.splice(sandwichDeck.length / 2, 0, lastCard, firstCard);
-  console.log(sandwichDeck);
   return sandwichDeck
 }
 
@@ -70,6 +68,7 @@ export function sandwichTrick(deck) {
  * @returns {number[]} deck with only 2s
  */
 export function twoIsSpecial(deck) {
+  return deck.filter((card) => card === 2)
 }
 
 /**
