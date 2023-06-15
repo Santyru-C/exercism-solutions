@@ -20,11 +20,11 @@ export function seeingDouble(deck) {
  * @returns {number[]} deck with triplicate 3s
  */
 export function threeOfEachThree(deck) {
-  const reduced = deck.reduce((accumulator, currentValue) => {
-    if (currentValue === 3) {
-      accumulator.push(3,3,3)
+  const reduced = deck.reduce((accumulator, card) => {
+    if (card === 3) {
+      accumulator.push(card,card,card)
     } else {
-      accumulator.push(currentValue)
+      accumulator.push(card)
     }
     return accumulator
   }, [])
@@ -55,7 +55,7 @@ export function middleTwo(deck) {
 export function sandwichTrick(deck) {
   const firstCard = deck[0];
   const lastCard = deck[deck.length - 1];
-  const sandwichDeck = deck.slice(1, -1);
+  const sandwichDeck = deck.slice(1, -1); // did not use pop and shift to rely on lesson's concepts
   sandwichDeck.splice(sandwichDeck.length / 2, 0, lastCard, firstCard);
   return sandwichDeck
 }
