@@ -49,7 +49,7 @@ export function limesToCut(wedgesNeeded, limes) {
         wedgesCut += 10;
         break;
     }
-  limeIndex += 1
+  limeIndex += 1;
   }
   return limeIndex
 }
