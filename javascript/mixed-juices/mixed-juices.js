@@ -4,6 +4,8 @@
 // the @ts-check directive. It will give you helpful autocompletion when
 // implementing this exercise.
 
+import { time } from "console";
+
 /**
  * Determines how long it takes to prepare a certain juice.
  *
@@ -62,5 +64,9 @@ export function limesToCut(wedgesNeeded, limes) {
  * @returns {string[]} remaining orders after the time is up
  */
 export function remainingOrders(timeLeft, orders) {
-  throw new Error('Please implement the remainingOrders function');
+  let timeSpent = 0;
+  while ((timeSpent < timeLeft) && orders) {
+    timeSpent += timeToMixJuice(orders.shift())
+  }
+  return orders
 }
