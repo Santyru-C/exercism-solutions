@@ -28,7 +28,7 @@ export function checkHumidityLevel(humidityPercentage) {
  * @throws {ArgumentError|OverheatingError}
  */
 export function reportOverheating(temperature) {
-  if (temperature === null) throw new ArgumentError;
+  if (temperature === null) throw new ArgumentError("Sensor is Broken!");
   if (temperature > 500) throw new OverheatingError(temperature);
 }
 
