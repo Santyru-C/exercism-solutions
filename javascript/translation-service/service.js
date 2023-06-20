@@ -27,7 +27,13 @@ export class TranslationService {
    * @returns {Promise<string>}
    */
   free(text) {
-    throw new Error('Implement the free function');
+    const translation = this.api.fetch(text);
+    const result = translation.then(solved => {
+      console.log(solved)
+      return solved.translation
+    })
+    
+    return result
   }
 
   /**
