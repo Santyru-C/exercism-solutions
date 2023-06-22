@@ -1,4 +1,5 @@
 /// <reference path="./global.d.ts" />
+
 // @ts-check
 //
 // The lines above enable type checking for this file. Various IDEs interpret
@@ -27,13 +28,6 @@ export class TranslationService {
    * @returns {Promise<string>}
    */
   free(text) {
-    const translation = this.api.fetch(text);
-    const result = translation.then(solved => {
-      console.log(solved)
-      return solved.translation
-    })
-    
-    return result
   }
 
   /**
@@ -47,7 +41,6 @@ export class TranslationService {
    * @returns {Promise<string[]>}
    */
   batch(texts) {
-    throw new Error('Implement the batch function');
   }
 
   /**
@@ -110,3 +103,4 @@ Requested a batch translation, but there are no texts in the batch.
     );
   }
 }
+
