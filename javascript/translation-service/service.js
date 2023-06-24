@@ -61,7 +61,16 @@ export class TranslationService {
    * @returns {Promise<void>}
    */
   request(text) {
-    throw new Error('Implement the request function');
+    const translate = () => new Promise((resolve, reject) => {
+      this.api.request(text, (result) => {
+        if (!result) resolve(undefined); 
+        reject(result);
+      })
+    })
+    
+    return translate()
+      .catch(translate)
+      .catch(translate)
   }
 
   /**
