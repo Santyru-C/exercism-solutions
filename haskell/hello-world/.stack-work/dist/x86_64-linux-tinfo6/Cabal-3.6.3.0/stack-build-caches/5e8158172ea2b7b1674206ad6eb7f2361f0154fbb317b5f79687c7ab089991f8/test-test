@@ -1,0 +1,14 @@
+/home/santyru/.stack/programs/x86_64-linux/ghc-tinfo6-9.2.7/lib/ghc-9.2.7/include/ghcversion.h:
+  hash: d590b76d2d5f98f01894882dc106d920a101f52edb6a09b9a7f8dc701b075565
+? /home/santyru/Documents/Repositories/exercism-solutions/haskell/hello-world/.stack-work/dist/x86_64-linux-tinfo6/Cabal-3.6.3.0/build/test/autogen/Paths_hello_world.hs
+: hash: 8225f85435a2d06f943201e4e741935bcdb0e5a5f116929719b4257d76be47f3
+? /home/santyru/Documents/Repositories/exercism-solutions/haskell/hello-world/.stack-work/dist/x86_64-linux-tinfo6/Cabal-3.6.3.0/build/test/autogen/cabal_macros.h
+: hash: 08fa60e7edec62070f9e9af47dcad0912a8b5e9544361f1b310eb49fb01072b2
+/home/santyru/Documents/Repositories/exercism-solutions/haskell/hello-world/hello-world.cabal:
+  hash: aa837f2c5cca4a702275fd908863f22682a79dea79624833985041f7b018f1e3
+/home/santyru/Documents/Repositories/exercism-solutions/haskell/hello-world/package.yaml:
+  hash: 160a1a88b7a5bd0f6f1ffd3e24f56cbba5e4d4fbd7f76ea73d649199ca9d76a5
+/home/santyru/Documents/Repositories/exercism-solutions/haskell/hello-world/test/Tests.hs:
+  hash: e3c9948060203a794b444e4596c90a63085f60817a31e9d626c9a3191142e0e5
+/usr/include/stdc-predef.h:
+  hash: cb08cd5d4cc059a90833ac48a284d25016e8d56ded8ad4cd98d8ac59cc5053f3
