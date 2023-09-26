@@ -2,5 +2,7 @@ module LeapYear (isLeapYear) where
 
 isLeapYear :: Integer -> Bool
 isLeapYear year
-    | (mod year 100 == 0) = (mod year 400 == 0)
-    | otherwise = (mod year 4 == 0)
+    | divisibleBy 100 = divisibleBy 400
+    | otherwise = divisibleBy 4
+    where 
+        divisibleBy x = mod year x == 0
