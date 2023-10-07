@@ -1,12 +1,12 @@
-def exchange_money(budget, exchange_rate):
+def exchange_money(budget: float, exchange_rate: float) -> float:
     """
 
     :param budget: float - amount of money you are planning to exchange.
     :param exchange_rate: float - unit value of the foreign currency.
     :return: float - exchanged value of the foreign currency you can receive.
     """
-
-    pass
+    res: float = budget / exchange_rate
+    return res
 
 
 def get_change(budget, exchanging_value):
