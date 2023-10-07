@@ -20,15 +20,15 @@ def get_change(budget: float, exchanging_value: float) -> float:
     return res
 
 
-def get_value_of_bills(denomination, number_of_bills):
+def get_value_of_bills(denomination: int, number_of_bills: int) -> int:
     """
 
     :param denomination: int - the value of a bill.
     :param number_of_bills: int - amount of bills you received.
     :return: int - total value of bills you now have.
     """
-
-    pass
+    res: int = denomination * number_of_bills
+    return res 
 
 
 def get_number_of_bills(budget, denomination):
